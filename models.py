@@ -80,7 +80,7 @@ class Permission(Base):
     name = Column("name", String, nullable=False)
 
     # Many to Many
-    users = relationship("UserPermission", back_populates="permission")
+    # users = relationship("UserPermission", back_populates="permission")
     roles = relationship("Role", secondary=RolePermission, back_populates="permissions")
 
 
